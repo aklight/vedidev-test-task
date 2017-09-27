@@ -16,7 +16,7 @@ export class MessageService {
         this.messages.push(message);
         var body = JSON.stringify(message);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('http://localhost:8080/message', body, {headers: headers})
+        return this.http.post('https://vedidev-test-task.herokuapp.com/message', body, {headers: headers})
             .map((response: Response) => {
                 const result = response.json();
                 const message = new Message(result.obj.content, result.obj.username);
@@ -27,7 +27,7 @@ export class MessageService {
     }
 
     getMessages() {
-        return this.http.get('http://localhost:8080/message')
+        return this.http.get('https://vedidev-test-task.herokuapp.com/message')
             .map((response: Response) => {
                 const messages = response.json().obj;
                 let transformedMessages: Message[] = [];
