@@ -1,4 +1,4 @@
- # MEAN stack builder ( Angular 2/4, Webpack)
+ # Test task for [Vedidev](https://vedidev.com)
 
 ## DEV mode
  `npm run build`.
